@@ -424,7 +424,7 @@ int main() {
                 printf("  8) Pontos Turísticos\n");
                 printf("  9) Densidade populacional\n");
                 printf("  10) PIB per capta\n");
-                printf("  11) Cancelar;");
+                printf("  11) Cancelar\n");
                 scanf("%d", &verif);
 
                 //direciona o usuario até a etapa adequada referentes a carta 1
