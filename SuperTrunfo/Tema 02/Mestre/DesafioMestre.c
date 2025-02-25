@@ -19,9 +19,10 @@ void pause_program() {
 //#ifdef é um if que verifica uma condição boleana em tempo de compilação. 
 #if defined(_WIN32) || defined(_WIN64)
     //função da biblioteca stdlib.h que é responsavel utilizar o comando pause no console. Exclusivo do windows.
+    printf("\n");
     system("pause");
 #else
-    printf("Pressione Enter para continuar... \n");
+    printf("\nPressione Enter para continuar... \n");
     getchar();
 #endif
 }
@@ -874,6 +875,7 @@ int main() {
                 
                 //função responsavel por limpar o console.
                 clear_console();
+
                 printf("*** Resultado Geral ***\n");
                 printf("Comparaçao das cartas:\n\n");
 
@@ -897,7 +899,7 @@ int main() {
                         printf("A carta 02: %s, venceu!\n", nome_cidade2);
                         printf("A carta 02 (%s) tem %lld habitantes.\n", nome_cidade2, populacao2);
                         printf("A carta 01 (%s) tem %lld habitantes.\n", nome_cidade1, populacao1);
-                        printf("Com isso a carta vencedora desta rodada foi a carta 2 (%s)!", nome_cidade2);
+                        printf("Com isso a carta vencedora desta rodada foi a carta 2 (%s)!\n", nome_cidade2);
                         contador_de_vitorias2++;
                     }else {
                         printf("*** RESULTADO DA PRIMEIRA RODADA *** \n");
@@ -918,7 +920,7 @@ int main() {
                         printf("A carta 01: %s, venceu!\n", nome_cidade1);
                         printf("A carta 01 (%s) tem %.2f km².\n", nome_cidade1, area1);
                         printf("A carta 02 (%s) tem %.2f km².\n", nome_cidade2, area2);
-                        printf("Com isso a carta vencedora desta rodada foi a carta 1 (%s)!", nome_cidade1);
+                        printf("Com isso a carta vencedora desta rodada foi a carta 1 (%s)!\n", nome_cidade1);
                         contador_de_vitorias1++;
                     } else if (vencedor_area == 2) {
                         printf("*** RESULTADO DA PRIMEIRA RODADA *** \n");
@@ -927,7 +929,7 @@ int main() {
                         printf("A carta 02: %s, venceu!\n", nome_cidade2);
                         printf("A carta 02 (%s) tem %.2f km².\n", nome_cidade2, area2);
                         printf("A carta 01 (%s) tem %.2f km².\n", nome_cidade1, area1);
-                        printf("Com isso a carta vencedora desta rodada foi a carta 2 (%s)!", nome_cidade2);
+                        printf("Com isso a carta vencedora desta rodada foi a carta 2 (%s)!\n", nome_cidade2);
                         contador_de_vitorias2++;
                     } else {
                         printf("*** RESULTADO DA PRIMEIRA RODADA *** \n");
@@ -948,7 +950,7 @@ int main() {
                         printf("A carta 01: %s, venceu!\n", nome_cidade1);
                         printf("A carta 01 (%s) tem %.2f bilhões de reais.\n", nome_cidade1, pib1);
                         printf("A carta 02 (%s) tem %.2f bilhões de reais.\n", nome_cidade2, pib2);
-                        printf("Com isso a carta vencedora desta rodada foi a carta 1 (%s)!", nome_cidade1);
+                        printf("Com isso a carta vencedora desta rodada foi a carta 1 (%s)!\n", nome_cidade1);
                         contador_de_vitorias1++;
                     } else if (vencedor_pib == 2) {
                         printf("*** RESULTADO DA PRIMEIRA RODADA *** \n");
@@ -957,7 +959,7 @@ int main() {
                         printf("A carta 02: %s, venceu!\n", nome_cidade2);
                         printf("A carta 02 (%s) tem %.2f bilhões de reais.\n", nome_cidade2, pib2);
                         printf("A carta 01 (%s) tem %.2f bilhões de reais.\n", nome_cidade1, pib1);
-                        printf("Com isso a carta vencedora desta rodada foi a carta 2 (%s)!", nome_cidade2);
+                        printf("Com isso a carta vencedora desta rodada foi a carta 2 (%s)!\n", nome_cidade2);
                         contador_de_vitorias2++;
                     } else {
                         printf("*** RESULTADO DA PRIMEIRA RODADA *** \n");
@@ -978,7 +980,7 @@ int main() {
                         printf("A carta 01: %s, venceu!\n", nome_cidade1);
                         printf("A carta 01 (%s) tem %d pontos turísticos.\n", nome_cidade1, numero_turisticos1);
                         printf("A carta 02 (%s) tem %d pontos turísticos.\n", nome_cidade2, numero_turisticos2);
-                        printf("Com isso a carta vencedora desta rodada foi a carta 1 (%s)!", nome_cidade1);
+                        printf("Com isso a carta vencedora desta rodada foi a carta 1 (%s)!\n", nome_cidade1);
                         contador_de_vitorias1++;
                     } else if (vencedor_turistico == 2) {
                         printf("*** RESULTADO DA PRIMEIRA RODADA *** \n");
@@ -987,7 +989,7 @@ int main() {
                         printf("A carta 02: %s, venceu!\n", nome_cidade2);
                         printf("A carta 02 (%s) tem %d pontos turísticos.\n", nome_cidade2, numero_turisticos2);
                         printf("A carta 01 (%s) tem %d pontos turísticos.\n", nome_cidade1, numero_turisticos1);
-                        printf("Com isso a carta vencedora desta rodada foi a carta 2 (%s)!", nome_cidade2);
+                        printf("Com isso a carta vencedora desta rodada foi a carta 2 (%s)!\n", nome_cidade2);
                         contador_de_vitorias2++;
                     } else {
                         printf("*** RESULTADO DA PRIMEIRA RODADA *** \n");
@@ -1008,7 +1010,7 @@ int main() {
                         printf("A carta 01: %s, venceu!\n", nome_cidade1);
                         printf("A carta 01 (%s) tem %.2f hab/km².\n", nome_cidade1, densidade1);
                         printf("A carta 02 (%s) tem %.2f hab/km².\n", nome_cidade2, densidade2);
-                        printf("Com isso a carta vencedora desta rodada foi a carta 1 (%s)!", nome_cidade1);
+                        printf("Com isso a carta vencedora desta rodada foi a carta 1 (%s)!\n", nome_cidade1);
                         contador_de_vitorias1++;
                     } else if (vencedor_densidade == 2){
                         printf("*** RESULTADO DA PRIMEIRA RODADA *** \n");
@@ -1017,7 +1019,7 @@ int main() {
                         printf("A carta 02: %s, venceu!\n", nome_cidade2);
                         printf("A carta 02 (%s) tem %.2f hab/km².\n", nome_cidade2, densidade2);
                         printf("A carta 01 (%s) tem %.2f hab/km².\n", nome_cidade1, densidade1);
-                        printf("Com isso a carta vencedora desta rodada foi a carta 2 (%s)!", nome_cidade2);
+                        printf("Com isso a carta vencedora desta rodada foi a carta 2 (%s)!\n", nome_cidade2);
                         contador_de_vitorias2++;
                     } else {
                         printf("*** RESULTADO DA PRIMEIRA RODADA *** \n");
@@ -1038,7 +1040,7 @@ int main() {
                         printf("A carta 01: %s, venceu!\n", nome_cidade1);
                         printf("A carta 01 (%s) tem %.2f reais por habitante.\n", nome_cidade1, pibpc1);
                         printf("A carta 02 (%s) tem %.2f reais por habitante.\n", nome_cidade2, pibpc2);
-                        printf("Com isso a carta vencedora desta rodada foi a carta 1 (%s)!", nome_cidade1);
+                        printf("Com isso a carta vencedora desta rodada foi a carta 1 (%s)!\n", nome_cidade1);
                         contador_de_vitorias1++;
                     } else if (vencedor_pibpc == 2) {
                         printf("*** RESULTADO DA PRIMEIRA RODADA *** \n");
@@ -1047,7 +1049,7 @@ int main() {
                         printf("A carta 02: %s, venceu!\n", nome_cidade2);
                         printf("A carta 02 (%s) tem %.2f reais por habitante.\n", nome_cidade2, pibpc2);
                         printf("A carta 01 (%s) tem %.2f reais por habitante.\n", nome_cidade1, pibpc1);
-                        printf("Com isso a carta vencedora desta rodada foi a carta 2 (%s)!", nome_cidade2);
+                        printf("Com isso a carta vencedora desta rodada foi a carta 2 (%s)!\n", nome_cidade2);
                         contador_de_vitorias2++;
                     } else {
                         printf("*** RESULTADO DA PRIMEIRA RODADA *** \n");
@@ -1068,7 +1070,7 @@ int main() {
                         printf("A carta 01: %s, venceu!\n", nome_cidade1);
                         printf("A carta 01 (%s) tem %.2lf pontos.\n", nome_cidade1, super_poder1);
                         printf("A carta 02 (%s) tem %.2lf pontos.\n", nome_cidade2, super_poder2);
-                        printf("Com isso a carta vencedora desta rodada foi a carta 1 (%s)!", nome_cidade1);
+                        printf("Com isso a carta vencedora desta rodada foi a carta 1 (%s)!\n", nome_cidade1);
                         contador_de_vitorias1++;
                     } else if (vencedor_super == 2) {
                         printf("*** RESULTADO DA PRIMEIRA RODADA *** \n");
@@ -1077,7 +1079,7 @@ int main() {
                         printf("A carta 02: %s, venceu!\n", nome_cidade2);
                         printf("A carta 02 (%s) tem %.2lf pontos.\n", nome_cidade2, super_poder2);
                         printf("A carta 01 (%s) tem %.2lf pontos.\n", nome_cidade1, super_poder1);
-                        printf("Com isso a carta vencedora desta rodada foi a carta 2 (%s)!", nome_cidade2);
+                        printf("Com isso a carta vencedora desta rodada foi a carta 2 (%s)!\n", nome_cidade2);
                         contador_de_vitorias2++;
                     } else {
                         printf("*** RESULTADO DA PRIMEIRA RODADA *** \n");
@@ -1099,12 +1101,13 @@ int main() {
 
                 //função responsavel por pausar o programa.
                 pause_program();
+
                 //com base na segunda opção selecionada revela o resultado da segunda rodada.
                 switch (verificador_final2)
                 {
                 case 1:
                     if (vencedor_populacao == 1) {
-                        printf("*** RESULTADO DA SEGUNDA RODADA *** \n");
+                        printf("\n*** RESULTADO DA SEGUNDA RODADA *** \n");
                         printf("*** A CATEGORIA SELECIONADA FOI: POPULAÇÃO ***\n\n");
                         printf("Nessa categoria vence quem tem mais habitantes.\n");
                         printf("A carta 01: %s, venceu!\n", nome_cidade1);
@@ -1113,16 +1116,16 @@ int main() {
                         printf("Com isso a carta vencedora desta rodada foi a carta 1 (%s)!\n", nome_cidade1);
                         contador_de_vitorias1++;
                     } else if (vencedor_populacao == 2){
-                        printf("*** RESULTADO DA SEGUNDA RODADA *** \n");
+                        printf("\n*** RESULTADO DA SEGUNDA RODADA *** \n");
                         printf("*** A CATEGORIA SELECIONADA FOI: POPULAÇÃO ***\n\n");
                         printf("Nessa categoria vence quem tem mais habitantes.\n");
                         printf("A carta 02: %s, venceu!\n", nome_cidade2);
                         printf("A carta 02 (%s) tem %lld habitantes.\n", nome_cidade2, populacao2);
                         printf("A carta 01 (%s) tem %lld habitantes.\n", nome_cidade1, populacao1);
-                        printf("Com isso a carta vencedora desta rodada foi a carta 2 (%s)!", nome_cidade2);
+                        printf("Com isso a carta vencedora desta rodada foi a carta 2 (%s)!\n", nome_cidade2);
                         contador_de_vitorias2++;
                     }else {
-                        printf("*** RESULTADO DA SEGUNDA RODADA *** \n");
+                        printf("\n*** RESULTADO DA SEGUNDA RODADA *** \n");
                         printf("*** A CATEGORIA SELECIONADA FOI: POPULAÇÃO ***\n\n");
                         printf("Nessa categoria vence quem tem mais habitantes.\n");
                         printf("Houve um empate!\n");
@@ -1134,25 +1137,25 @@ int main() {
                     break;
                 case 2:
                     if (vencedor_area == 1) {
-                        printf("*** RESULTADO DA SEGUNDA RODADA *** \n");
+                        printf("\n*** RESULTADO DA SEGUNDA RODADA *** \n");
                         printf("*** A CATEGORIA SELECIONADA FOI: ÁREA ***\n\n");
                         printf("Nessa categoria vence quem tem mais km².\n");
                         printf("A carta 01: %s, venceu!\n", nome_cidade1);
                         printf("A carta 01 (%s) tem %.2f km².\n", nome_cidade1, area1);
                         printf("A carta 02 (%s) tem %.2f km².\n", nome_cidade2, area2);
-                        printf("Com isso a carta vencedora desta rodada foi a carta 1 (%s)!", nome_cidade1);
+                        printf("Com isso a carta vencedora desta rodada foi a carta 1 (%s)!\n", nome_cidade1);
                         contador_de_vitorias1++;
                     } else if (vencedor_area == 2) {
-                        printf("*** RESULTADO DA SEGUNDA RODADA *** \n");
+                        printf("\n*** RESULTADO DA SEGUNDA RODADA *** \n");
                         printf("*** A CATEGORIA SELECIONADA FOI: ÁREA ***\n\n");
                         printf("Nessa categoria vence quem tem mais km².\n");
                         printf("A carta 02: %s, venceu!\n", nome_cidade2);
                         printf("A carta 02 (%s) tem %.2f km².\n", nome_cidade2, area2);
                         printf("A carta 01 (%s) tem %.2f km².\n", nome_cidade1, area1);
-                        printf("Com isso a carta vencedora desta rodada foi a carta 2 (%s)!", nome_cidade2);
+                        printf("Com isso a carta vencedora desta rodada foi a carta 2 (%s)!\n", nome_cidade2);
                         contador_de_vitorias2++;
                     } else {
-                        printf("*** RESULTADO DA SEGUNDA RODADA *** \n");
+                        printf("\n*** RESULTADO DA SEGUNDA RODADA *** \n");
                         printf("*** A CATEGORIA SELECIONADA FOI: ÁREA ***\n\n");
                         printf("Nessa categoria vence quem tem mais km².\n");
                         printf("Houve um empate!\n");
@@ -1164,25 +1167,25 @@ int main() {
                     break;
                 case 3:
                     if (vencedor_pib == 1) {
-                        printf("*** RESULTADO DA SEGUNDA RODADA *** \n");
+                        printf("\n*** RESULTADO DA SEGUNDA RODADA *** \n");
                         printf("*** A CATEGORIA SELECIONADA FOI: PIB ***\n\n");
                         printf("Nessa categoria vence quem tem mais dinheiro.\n");
                         printf("A carta 01: %s, venceu!\n", nome_cidade1);
                         printf("A carta 01 (%s) tem %.2f bilhões de reais.\n", nome_cidade1, pib1);
                         printf("A carta 02 (%s) tem %.2f bilhões de reais.\n", nome_cidade2, pib2);
-                        printf("Com isso a carta vencedora desta rodada foi a carta 1 (%s)!", nome_cidade1);
+                        printf("Com isso a carta vencedora desta rodada foi a carta 1 (%s)!\n", nome_cidade1);
                         contador_de_vitorias1++;
                     } else if (vencedor_pib == 2) {
-                        printf("*** RESULTADO DA SEGUNDA RODADA *** \n");
+                        printf("\n*** RESULTADO DA SEGUNDA RODADA *** \n");
                         printf("*** A CATEGORIA SELECIONADA FOI: PIB ***\n\n");
                         printf("Nessa categoria vence quem tem mais dinheiro.\n");
                         printf("A carta 02: %s, venceu!\n", nome_cidade2);
                         printf("A carta 02 (%s) tem %.2f bilhões de reais.\n", nome_cidade2, pib2);
                         printf("A carta 01 (%s) tem %.2f bilhões de reais.\n", nome_cidade1, pib1);
-                        printf("Com isso a carta vencedora desta rodada foi a carta 2 (%s)!", nome_cidade2);
+                        printf("Com isso a carta vencedora desta rodada foi a carta 2 (%s)!\n", nome_cidade2);
                         contador_de_vitorias2++;
                     } else {
-                        printf("*** RESULTADO DA SEGUNDA RODADA *** \n");
+                        printf("\n*** RESULTADO DA SEGUNDA RODADA *** \n");
                         printf("*** A CATEGORIA SELECIONADA FOI: PIB ***\n\n");
                         printf("Nessa categoria vence quem tem mais dinheiro.\n");
                         printf("Houve um empate!\n");
@@ -1194,25 +1197,25 @@ int main() {
                     break;
                 case 4:
                     if (vencedor_turistico == 1) {
-                        printf("*** RESULTADO DA SEGUNDA RODADA *** \n");
+                        printf("\n*** RESULTADO DA SEGUNDA RODADA *** \n");
                         printf("*** A CATEGORIA SELECIONADA FOI: PONTOS TURÍSTICOS ***\n\n");
                         printf("Nessa categoria vence quem tem mais pontos turísticos.\n");
                         printf("A carta 01: %s, venceu!\n", nome_cidade1);
                         printf("A carta 01 (%s) tem %d pontos turísticos.\n", nome_cidade1, numero_turisticos1);
                         printf("A carta 02 (%s) tem %d pontos turísticos.\n", nome_cidade2, numero_turisticos2);
-                        printf("Com isso a carta vencedora desta rodada foi a carta 1 (%s)!", nome_cidade1);
+                        printf("Com isso a carta vencedora desta rodada foi a carta 1 (%s)!\n", nome_cidade1);
                         contador_de_vitorias1++;
                     } else if (vencedor_turistico == 2) {
-                        printf("*** RESULTADO DA SEGUNDA RODADA *** \n");
+                        printf("\n*** RESULTADO DA SEGUNDA RODADA *** \n");
                         printf("*** A CATEGORIA SELECIONADA FOI: PONTOS TURÍSTICOS ***\n\n");
                         printf("Nessa categoria vence quem tem mais pontos turísticos.\n");
                         printf("A carta 02: %s, venceu!\n", nome_cidade2);
                         printf("A carta 02 (%s) tem %d pontos turísticos.\n", nome_cidade2, numero_turisticos2);
                         printf("A carta 01 (%s) tem %d pontos turísticos.\n", nome_cidade1, numero_turisticos1);
-                        printf("Com isso a carta vencedora desta rodada foi a carta 2 (%s)!", nome_cidade2);
+                        printf("Com isso a carta vencedora desta rodada foi a carta 2 (%s)!\n", nome_cidade2);
                         contador_de_vitorias2++;
                     } else {
-                        printf("*** RESULTADO DA SEGUNDA RODADA *** \n");
+                        printf("\n*** RESULTADO DA SEGUNDA RODADA *** \n");
                         printf("*** A CATEGORIA SELECIONADA FOI: PONTOS TURÍSTICOS ***\n\n");
                         printf("Nessa categoria vence quem tem mais pontos turísticos.\n");
                         printf("Houve um empate!\n");
@@ -1224,25 +1227,25 @@ int main() {
                     break;
                 case 5:
                     if (vencedor_densidade == 1) {
-                        printf("*** RESULTADO DA SEGUNDA RODADA *** \n");
+                        printf("\n*** RESULTADO DA SEGUNDA RODADA *** \n");
                         printf("*** A CATEGORIA SELECIONADA FOI: DENSIDADE DEMOGRÁFICA ***\n\n");
                         printf("Nessa categoria vence quem tem menos habitantes por km².\n");
                         printf("A carta 01: %s, venceu!\n", nome_cidade1);
                         printf("A carta 01 (%s) tem %.2f hab/km².\n", nome_cidade1, densidade1);
                         printf("A carta 02 (%s) tem %.2f hab/km².\n", nome_cidade2, densidade2);
-                        printf("Com isso a carta vencedora desta rodada foi a carta 1 (%s)!", nome_cidade1);
+                        printf("Com isso a carta vencedora desta rodada foi a carta 1 (%s)!\n", nome_cidade1);
                         contador_de_vitorias1++;
                     } else if (vencedor_densidade == 2){
-                        printf("*** RESULTADO DA SEGUNDA RODADA *** \n");
+                        printf("\n*** RESULTADO DA SEGUNDA RODADA *** \n");
                         printf("*** A CATEGORIA SELECIONADA FOI: DENSIDADE DEMOGRÁFICA ***\n\n");
                         printf("Nessa categoria vence quem tem menos habitantes por km².\n");
                         printf("A carta 02: %s, venceu!\n", nome_cidade2);
                         printf("A carta 02 (%s) tem %.2f hab/km².\n", nome_cidade2, densidade2);
                         printf("A carta 01 (%s) tem %.2f hab/km².\n", nome_cidade1, densidade1);
-                        printf("Com isso a carta vencedora desta rodada foi a carta 2 (%s)!", nome_cidade2);
+                        printf("Com isso a carta vencedora desta rodada foi a carta 2 (%s)!\n", nome_cidade2);
                         contador_de_vitorias2++;
                     } else {
-                        printf("*** RESULTADO DA SEGUNDA RODADA *** \n");
+                        printf("\n*** RESULTADO DA SEGUNDA RODADA *** \n");
                         printf("*** A CATEGORIA SELECIONADA FOI: DENSIDADE DEMOGRÁFICA ***\n\n");
                         printf("Nessa categoria vence quem tem menos habitantes por km².\n");
                         printf("Houve um empate!\n");
@@ -1254,25 +1257,25 @@ int main() {
                     break;
                 case 6:
                     if (vencedor_pibpc == 1) {
-                        printf("*** RESULTADO DA SEGUNDA RODADA *** \n");
+                        printf("\n*** RESULTADO DA SEGUNDA RODADA *** \n");
                         printf("*** A CATEGORIA SELECIONADA FOI: PIB PER CAPTA ***\n\n");
                         printf("Nessa categoria vence quem tem mais dinheiro por habitantes.\n");
                         printf("A carta 01: %s, venceu!\n", nome_cidade1);
                         printf("A carta 01 (%s) tem %.2f reais por habitante.\n", nome_cidade1, pibpc1);
                         printf("A carta 02 (%s) tem %.2f reais por habitante.\n", nome_cidade2, pibpc2);
-                        printf("Com isso a carta vencedora desta rodada foi a carta 1 (%s)!", nome_cidade1);
+                        printf("Com isso a carta vencedora desta rodada foi a carta 1 (%s)!\n", nome_cidade1);
                         contador_de_vitorias1++;
                     } else if (vencedor_pibpc == 2) {
-                        printf("*** RESULTADO DA SEGUNDA RODADA *** \n");
+                        printf("\n*** RESULTADO DA SEGUNDA RODADA *** \n");
                         printf("*** A CATEGORIA SELECIONADA FOI: PIB PER CAPTA ***\n\n");
                         printf("Nessa categoria vence quem tem mais dinheiro por habitantes.\n");
                         printf("A carta 02: %s, venceu!\n", nome_cidade2);
                         printf("A carta 02 (%s) tem %.2f reais por habitante.\n", nome_cidade2, pibpc2);
                         printf("A carta 01 (%s) tem %.2f reais por habitante.\n", nome_cidade1, pibpc1);
-                        printf("Com isso a carta vencedora desta rodada foi a carta 2 (%s)!", nome_cidade2);
+                        printf("Com isso a carta vencedora desta rodada foi a carta 2 (%s)!\n", nome_cidade2);
                         contador_de_vitorias2++;
                     } else {
-                        printf("*** RESULTADO DA SEGUNDA RODADA *** \n");
+                        printf("\n*** RESULTADO DA SEGUNDA RODADA *** \n");
                         printf("*** A CATEGORIA SELECIONADA FOI: PIB PER CAPTA ***\n\n");
                         printf("Nessa categoria vence quem tem mais dinheiro por habitantes.\n");
                         printf("Houve um empate!\n");
@@ -1284,25 +1287,25 @@ int main() {
                     break;
                 case 7:
                     if (vencedor_super == 1) {
-                        printf("*** RESULTADO DA SEGUNDA RODADA *** \n");
+                        printf("\n*** RESULTADO DA SEGUNDA RODADA *** \n");
                         printf("*** A CATEGORIA SELECIONADA FOI: SUPER PODER ***\n\n");
                         printf("Nessa categoria vence quem tem mais pontos.\n");
                         printf("A carta 01: %s, venceu!\n", nome_cidade1);
                         printf("A carta 01 (%s) tem %.2lf pontos.\n", nome_cidade1, super_poder1);
                         printf("A carta 02 (%s) tem %.2lf pontos.\n", nome_cidade2, super_poder2);
-                        printf("Com isso a carta vencedora desta rodada foi a carta 1 (%s)!", nome_cidade1);
+                        printf("Com isso a carta vencedora desta rodada foi a carta 1 (%s)!\n", nome_cidade1);
                         contador_de_vitorias1++;
                     } else if (vencedor_super == 2) {
-                        printf("*** RESULTADO DA SEGUNDA RODADA *** \n");
+                        printf("\n*** RESULTADO DA SEGUNDA RODADA *** \n");
                         printf("*** A CATEGORIA SELECIONADA FOI: SUPER PODER ***\n\n");
                         printf("Nessa categoria vence quem tem mais pontos.\n");
                         printf("A carta 02: %s, venceu!\n", nome_cidade2);
                         printf("A carta 02 (%s) tem %.2lf pontos.\n", nome_cidade2, super_poder2);
                         printf("A carta 01 (%s) tem %.2lf pontos.\n", nome_cidade1, super_poder1);
-                        printf("Com isso a carta vencedora desta rodada foi a carta 2 (%s)!", nome_cidade2);
+                        printf("Com isso a carta vencedora desta rodada foi a carta 2 (%s)!\n", nome_cidade2);
                         contador_de_vitorias2++;
                     } else {
-                        printf("*** RESULTADO DA SEGUNDA RODADA *** \n");
+                        printf("\n*** RESULTADO DA SEGUNDA RODADA *** \n");
                         printf("*** A CATEGORIA SELECIONADA FOI: SUPER PODER ***\n\n");
                         printf("Nessa categoria vence quem tem mais pontos.\n");
                         printf("Houve um empate!\n");
@@ -1330,30 +1333,32 @@ int main() {
                 int quem_venceu = decidir_vencedor(soma1, soma2, 0);
 
                 if (quem_venceu == 1) {
-                    printf("*** RESULTADO DA TERCEIRA RODADA ***\n");
+                    printf("\n*** RESULTADO DA TERCEIRA RODADA ***\n");
                     printf("Nessa rodada vence quem tem mais pontos somando as duas categorias.\n");
-                    printf("ATENÇÃO: Caso exista a densidade seja um dos valores a ser somado, ela será somada como o inverso do seu valor.\n\n");
+                    printf("ATENÇÃO: Caso a densidade demografica seja um dos valores a ser somado, a soma será sempre o invernso da densidade mais a outra opção selecionada.\n\n");
                     printf("A carta que apresentou a melhor soma foi a carta 01 (%s) pois possui a soma de: %.2lf \n", nome_cidade1, soma1);
                     printf("A carta 02 (%s) alcançou uma soma de: %.2lf \n", nome_cidade2, soma2);
                     contador_de_vitorias1++;
                 } else if (quem_venceu == 2) {
-                    printf("*** RESULTADO DA TERCEIRA RODADA ***\n");
+                    printf("\n*** RESULTADO DA TERCEIRA RODADA ***\n");
                     printf("Nessa rodada vence quem tem mais pontos somando as duas categorias.\n");
-                    printf("ATENÇÃO: Caso exista a densidade seja um dos valores a ser somado, ela será somada como o inverso do seu valor.\n\n");
+                    printf("ATENÇÃO: Caso a densidade demografica seja um dos valores a ser somado, a soma será sempre o invernso da densidade mais a outra opção selecionada.\n\n");
                     printf("A carta que apresentou a melhor soma foi a carta 02 (%s) pois possui a soma de: %.2lf \n", nome_cidade2, soma2);
                     printf("A carta 01 (%s) alcançou uma soma de: %.2lf \n", nome_cidade1, soma1);
                     contador_de_vitorias2++;
                 } else {
-                    printf("*** RESULTADO DA TERCEIRA RODADA ***\n");
+                    printf("\n*** RESULTADO DA TERCEIRA RODADA ***\n");
                     printf("Nessa rodada vence quem tem mais pontos somando as duas categorias.\n");
-                    printf("ATENÇÃO: Caso exista a densidade seja um dos valores a ser somado, ela será somada como o inverso do seu valor.\n\n");
+                    printf("ATENÇÃO: Caso a densidade demografica seja um dos valores a ser somado, a soma será sempre o invernso da densidade mais a outra opção selecionada.\n\n");
                     printf("A carta 01 (%s) alcançou uma soma de: %.2lf \n", nome_cidade1, soma1);
                     printf("A carta 02 (%s) alcançou uma soma de: %.2lf \n", nome_cidade2, soma2);
                     printf("O que singnifica que houve um empate nesta rodada\n");
                     contador_de_empates++;
                 }
 
-                printf("A carta 01 (%s) ganhou %d vezes. \n", nome_cidade1, contador_de_vitorias1);
+                pause_program();
+
+                printf("\nA carta 01 (%s) ganhou %d vezes. \n", nome_cidade1, contador_de_vitorias1);
                 printf("A carta 02 (%s) ganhou %d vezes. \n", nome_cidade2, contador_de_vitorias2);
                 printf("houve %d empates. \n", contador_de_empates);
             }
